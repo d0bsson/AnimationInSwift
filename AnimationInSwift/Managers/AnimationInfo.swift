@@ -6,3 +6,6 @@
 //
 
 
+struct AnimationInfo {
+    
+}

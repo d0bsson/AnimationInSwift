@@ -13,4 +13,14 @@ struct AnimationData {
     let force: String
     let duration: String
     let delay: String
+    
+    var labelData: String {
+        """
+        \(preset)
+        \(curve)
+        \(force)
+        \(duration)
+        \(delay)
+        """
+    }
 }

@@ -5,15 +5,14 @@
 //  Created by Дэвид Бердников on 27.04.2021.
 //
 
-import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var springAnimationView: SpringView!
+    
+    @IBAction func runSpringAnimation(_ sender: SpringButton) {
     }
-
-
+    
 }
 
