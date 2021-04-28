@@ -66,6 +66,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationInfoLabel" destination="7PC-9g-02h" id="x7A-Bz-ukH"/>
+                        <outlet property="runButton" destination="dse-cj-rvg" id="YgZ-7m-mXS"/>
                         <outlet property="springAnimationView" destination="yqv-W8-hod" id="3fh-0d-jkl"/>
                     </connections>
                 </viewController>

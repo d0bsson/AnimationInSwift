@@ -8,4 +8,10 @@
 
 struct AnimationInfo {
     
+    static let shared = AnimationInfo()
+    
+    let presets = ["shake", "pop", "morph", "squeeze", "wobble"]
+    let curves = ["spring", "linear", "easeIn", "easeOut", "easeInOut"]
+    
+    private init() {}
 }

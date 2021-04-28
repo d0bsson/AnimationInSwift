@@ -14,7 +14,7 @@
 		D757100F2637F95E002D3E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D757100D2637F95E002D3E2F /* Main.storyboard */; };
 		D75710112637F95F002D3E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75710102637F95F002D3E2F /* Assets.xcassets */; };
 		D75710142637F95F002D3E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75710122637F95F002D3E2F /* LaunchScreen.storyboard */; };
-		D75710242637FA09002D3E2F /* AnimationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75710232637FA09002D3E2F /* AnimationData.swift */; };
+		D75710242637FA09002D3E2F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75710232637FA09002D3E2F /* Animation.swift */; };
 		D75710292637FEE1002D3E2F /* AnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75710282637FEE0002D3E2F /* AnimationInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		D75710102637F95F002D3E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75710132637F95F002D3E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75710152637F95F002D3E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D75710232637FA09002D3E2F /* AnimationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationData.swift; sourceTree = "<group>"; };
+		D75710232637FA09002D3E2F /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		D75710282637FEE0002D3E2F /* AnimationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,12 +76,12 @@
 		D75710062637F95E002D3E2F /* AnimationInSwift */ = {
 			isa = PBXGroup;
 			children = (
+				D757101E2637F99E002D3E2F /* Models */,
+				D757101D2637F990002D3E2F /* ViewControllers */,
+				D757101F2637F9A8002D3E2F /* Storyboards */,
 				D75710272637FA13002D3E2F /* Managers */,
 				D75710212637F9BA002D3E2F /* Resources */,
 				D75710202637F9B0002D3E2F /* Supporting */,
-				D757101F2637F9A8002D3E2F /* Storyboards */,
-				D757101E2637F99E002D3E2F /* Models */,
-				D757101D2637F990002D3E2F /* ViewControllers */,
 			);
 			path = AnimationInSwift;
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 		D757101E2637F99E002D3E2F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D75710232637FA09002D3E2F /* AnimationData.swift */,
+				D75710232637FA09002D3E2F /* Animation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75710242637FA09002D3E2F /* AnimationData.swift in Sources */,
+				D75710242637FA09002D3E2F /* Animation.swift in Sources */,
 				D75710292637FEE1002D3E2F /* AnimationInfo.swift in Sources */,
 				D757100C2637F95E002D3E2F /* ViewController.swift in Sources */,
 				D75710082637F95E002D3E2F /* AppDelegate.swift in Sources */,
