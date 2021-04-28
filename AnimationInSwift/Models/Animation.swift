@@ -18,9 +18,9 @@ struct Animation {
         """
         \(preset)
         \(curve)
-        \(force)
-        \(duration)
-        \(delay)
+        \(String(format: "%.2f", force))
+        \(String(format: "%.2f", duration))
+        \(String(format: "%.2f", delay))
         """
     }
 }
@@ -32,7 +32,7 @@ extension Animation {
         Animation(preset: AnimationInfo.shared.presets.randomElement() ?? "",
                   curve: AnimationInfo.shared.curves.randomElement() ?? "",
                   force: Double.random(in: 0.01...0.15),
-                  duration: Double.random(in: 0.01...0.15),
+                  duration: Double.random(in: 0.1...1.0),
                   delay: Double.random(in: 0.01...0.15))
     }
 }

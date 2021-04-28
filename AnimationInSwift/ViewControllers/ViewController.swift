@@ -13,27 +13,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var runButton: SpringButton!
     @IBOutlet weak var animationInfoLabel: UILabel!
     
-    private let animation = Animation.getAnimation()
+    private var animation = Animation.getAnimation()
     
     
     
     
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
-        if runButton.currentTitle == "Run" {
-            runButton.setTitle("Run \(animation.preset)", for: .normal)
-        }
+        getNameButton()
+        createAnimation()
+        getNameButton()
+        getNameLabel()
+        animation = Animation.getAnimation()
+    }
+    
+    private func getNameLabel() {
+        animationInfoLabel.text = String(animation.labelData)
+    }
+    private func createAnimation() {
         springAnimationView.animation = animation.preset
         springAnimationView.curve = animation.curve
         springAnimationView.duration = CGFloat(animation.duration)
         springAnimationView.force = CGFloat(animation.force)
         springAnimationView.delay = CGFloat(animation.delay)
-        
+
         springAnimationView.animate()
-        getNameButton()
     }
-    
     private func getNameButton() {
-        animationInfoLabel.text = String(animation.labelData)
+        if runButton.currentTitle == "Run" {
+            runButton.setTitle("Run \(animation.preset)", for: .normal)
+        }
     }
 }
 
