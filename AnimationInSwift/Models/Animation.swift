@@ -11,4 +11,29 @@ struct Animation {
     let preset: String
     let curve: String
     let force: Double
+    let duration: Double
+    let delay: Double
+    
+    var labelData: String {
+        """
+        \(preset)
+        \(curve)
+        \(force)
+        \(duration)
+        \(delay)
+        """
+    }
 }
+
+extension Animation {
+    
+    static func getAnimation() -> Animation {
+        
+        Animation(preset: AnimationInfo.shared.presets.randomElement() ?? "",
+                  curve: AnimationInfo.shared.curves.randomElement() ?? "",
+                  force: Double.random(in: 0.01...0.15),
+                  duration: Double.random(in: 0.01...0.15),
+                  delay: Double.random(in: 0.01...0.15))
+    }
+}
+

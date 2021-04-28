@@ -20,19 +20,20 @@ class ViewController: UIViewController {
     
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
         if runButton.currentTitle == "Run" {
-            runButton.setTitle("Run 1", for: .normal)
+            runButton.setTitle("Run \(animation.preset)", for: .normal)
         }
-        
         springAnimationView.animation = animation.preset
         springAnimationView.curve = animation.curve
-        springAnimationView.duration = 
+        springAnimationView.duration = CGFloat(animation.duration)
         springAnimationView.force = CGFloat(animation.force)
+        springAnimationView.delay = CGFloat(animation.delay)
+        
         springAnimationView.animate()
-        
-        
-
-        
+        getNameButton()
     }
     
+    private func getNameButton() {
+        animationInfoLabel.text = String(animation.labelData)
+    }
 }
 
