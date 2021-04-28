@@ -9,18 +9,21 @@ import Spring
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet weak var springAnimationView: SpringView!
     @IBOutlet weak var runButton: SpringButton!
     @IBOutlet weak var animationInfoLabel: UILabel!
     
+    // MARK: - Private Properties
     private var animation = Animation.getAnimation()
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         getNameLabel()
     }
     
-    
+    // MARK: - IB Actions
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
         getNameButton()
         createAnimation()
@@ -29,9 +32,11 @@ class ViewController: UIViewController {
         animation = Animation.getAnimation()
     }
     
+    // MARK: - Private Methods
     private func getNameLabel() {
         animationInfoLabel.text = String(animation.labelData)
     }
+    
     private func createAnimation() {
         springAnimationView.animation = animation.preset
         springAnimationView.curve = animation.curve
@@ -41,6 +46,7 @@ class ViewController: UIViewController {
 
         springAnimationView.animate()
     }
+    
     private func getNameButton() {
         if runButton.currentTitle == "Run" {
             runButton.setTitle("Run \(animation.preset)", for: .normal)
