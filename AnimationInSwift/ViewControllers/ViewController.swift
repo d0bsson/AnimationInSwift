@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         createAnimation()
         getNameButton()
         getNameLabel()
-        animation = Animation.getAnimation()
+        
     }
     
     // MARK: - Private Methods
@@ -43,7 +43,8 @@ class ViewController: UIViewController {
         springAnimationView.duration = CGFloat(animation.duration)
         springAnimationView.force = CGFloat(animation.force)
         springAnimationView.delay = CGFloat(animation.delay)
-
+        
+        animation = Animation.getAnimation()
         springAnimationView.animate()
     }
     
