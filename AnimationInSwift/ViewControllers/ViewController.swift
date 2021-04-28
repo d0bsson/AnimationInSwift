@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     
     private var animation = Animation.getAnimation()
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getNameLabel()
+    }
     
     
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
