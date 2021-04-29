@@ -29,8 +29,8 @@ extension Animation {
     
     static func getAnimation() -> Animation {
         
-        Animation(preset: AnimationInfo.shared.presets.randomElement() ?? "",
-                  curve: AnimationInfo.shared.curves.randomElement() ?? "",
+        Animation(preset: AnimationInfo.shared.presets.randomElement() ?? "shake",
+                  curve: AnimationInfo.shared.curves.randomElement() ?? "spring",
                   force: Double.random(in: 0.01...0.15),
                   duration: Double.random(in: 0.5...1.0),
                   delay: Double.random(in: 0.01...0.15))

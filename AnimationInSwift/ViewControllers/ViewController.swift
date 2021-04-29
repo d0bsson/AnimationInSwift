@@ -26,9 +26,7 @@ class ViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
         createAnimation()
-        //        getNameButton()
         getNameLabel()
-        
     }
     
     // MARK: - Private Methods
@@ -37,16 +35,16 @@ class ViewController: UIViewController {
     }
     
     private func createAnimation() {
+        animation = Animation.getAnimation()
+        
         springAnimationView.animation = animation.preset
         springAnimationView.curve = animation.curve
         springAnimationView.duration = CGFloat(animation.duration)
         springAnimationView.force = CGFloat(animation.force)
         springAnimationView.delay = CGFloat(animation.delay)
         
-        animation = Animation.getAnimation()
         runButton.setTitle("Run \(animation.preset)", for: .normal)
         springAnimationView.animate()
     }
 }
-
 
