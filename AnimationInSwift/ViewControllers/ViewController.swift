@@ -8,7 +8,7 @@
 import Spring
 
 class ViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet weak var springAnimationView: SpringView!
     @IBOutlet weak var runButton: SpringButton!
@@ -25,9 +25,8 @@ class ViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
-        getNameButton()
         createAnimation()
-        getNameButton()
+        //        getNameButton()
         getNameLabel()
         
     }
@@ -45,13 +44,9 @@ class ViewController: UIViewController {
         springAnimationView.delay = CGFloat(animation.delay)
         
         animation = Animation.getAnimation()
+        runButton.setTitle("Run \(animation.preset)", for: .normal)
         springAnimationView.animate()
     }
-    
-    private func getNameButton() {
-        if runButton.currentTitle == "Run" {
-            runButton.setTitle("Run \(animation.preset)", for: .normal)
-        }
-    }
 }
+
 
