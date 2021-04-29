@@ -42,9 +42,10 @@ class ViewController: UIViewController {
         springAnimationView.duration = CGFloat(animation.duration)
         springAnimationView.force = CGFloat(animation.force)
         springAnimationView.delay = CGFloat(animation.delay)
+        springAnimationView.animate()
         
         runButton.setTitle("Run \(animation.preset)", for: .normal)
-        springAnimationView.animate()
+        
     }
 }
 
