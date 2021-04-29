@@ -31,7 +31,7 @@ extension Animation {
         
         Animation(preset: AnimationInfo.shared.presets.randomElement() ?? "shake",
                   curve: AnimationInfo.shared.curves.randomElement() ?? "spring",
-                  force: Double.random(in: 0.01...0.15),
+                  force: Double.random(in: 0.01...0.1),
                   duration: Double.random(in: 0.5...1.0),
                   delay: Double.random(in: 0.01...0.15))
     }

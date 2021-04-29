@@ -50,7 +50,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="runSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNq-WN-eoW"/>
+                                    <action selector="runSpringAnimation" destination="BYZ-38-t0r" eventType="touchUpInside" id="GyI-3W-HcI"/>
                                 </connections>
                             </button>
                         </subviews>

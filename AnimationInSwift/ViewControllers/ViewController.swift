@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - IB Actions
-    @IBAction func runSpringAnimation(_ sender: SpringButton) {
+    @IBAction func runSpringAnimation() {
         createAnimation()
         getNameLabel()
     }
